@@ -1,0 +1,67 @@
+/* Colors */
+
+$gray : #fbfbfb;
+$gray1 : #fdfdfd; 
+$gray2 : #e7e7e7;
+$gray3 : #2f2f2f;
+$black : black;
+$white : #f4f4f4;
+$red : #a11526;
+$gray_consult : #d9d6d6;
+$menu-color : rgba(216, 216, 216, 0.5);
+
+/* Fonts import */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+/* Fonts size */
+
+$title-size1 : 18px;
+$title-size2 : 15px;
+$font : Quicksand;
+$font-p : "Open Sans";
+
+
+/* MEDIA WIDTHS */
+
+$mobile:768px;
+$desktop-min:992px;
+$desktop-max:1200px;
+
+/* DECORATION */
+@mixin gradient() {
+    background: #373737; /* Old browsers */
+    background: -moz-linear-gradient(left,  #373737 0%, #565656 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#373737), color-stop(100%,#565656)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #373737 0%,#565656 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #373737 0%,#565656 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #373737 0%,#565656 100%); /* IE10+ */
+    background: linear-gradient(to right,  #373737 0%,#565656 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#565656',GradientType=1 ); /* IE6-9 */
+}
+/* TOOLS */
+
+.clear { clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  .hidden-mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .hidden-menu {
+    display: none;
+    visibility: hidden;
+  }
+}
+

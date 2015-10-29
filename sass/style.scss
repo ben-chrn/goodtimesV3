@@ -1,0 +1,918 @@
+/*
+	Theme Name: Goodtimes
+	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
+*/
+
+
+@import "libs/bootstrap.scss";
+@import "_variable.scss";
+@import "_noemie";
+@import "_ben.scss";
+
+
+/* HOME */ 
+
+body{
+    font-family: $font;
+    font-size:$title-size2;
+    color:black;
+    font-weight:100;
+}
+
+p {
+	font-family:$font-p;
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+
+/* FOOTER */
+
+footer {
+	@include gradient();
+	margin-top: 50px;
+	padding: 15px;
+	width: 100%;
+	color: white;
+	font-size: 18px;
+	text-align:center;
+	font-family: $font;
+}
+
+
+/* MOBILE */
+@media screen and (min-width: 0px) and (max-width: 750px) {
+	/* NavBar - Menu */
+	nav {
+
+		background-color: transparent;
+		
+			#hamb {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;  
+				cursor: pointer;  
+				height:100px;
+				margin: auto;
+				margin-top:35%;
+
+			}	
+
+			.icon-bar {
+				background-color: $black;
+				display: block;
+				width:100%;
+				height:20%;
+				transition:0.20s;
+				-webkit-transition:0.0s;  
+				-webkit-user-select: none;
+				-moz-user-select: none;    
+				-ms-user-select: none;      
+				user-select: none; 
+			}
+
+
+			.animate .icon-bar:nth-child(1) {
+			    transform:translateY(7px) rotate(135deg);
+			}
+
+			.animate .icon-bar:nth-child(2) {
+			    opacity: 0;
+			}
+
+			.animate .icon-bar:nth-child(3) {
+			    transform:translateY(-5px) rotate(-135deg);
+			}
+
+			.navbar-collapse {
+				background-color: $gray1;
+			}
+
+			.navbar-nav ul {
+				padding-left: 0;
+			}
+
+			.navbar-nav ul li.page_item {
+			    display: block;
+			    text-decoration: none;
+				font-size: 18px;
+				text-align: center;
+
+				a {
+					text-decoration: none;
+				 	color: $black;
+				  	display: block;
+				  	padding: 10px;
+				}
+				
+				&:active {
+					background-color: $gray2;
+				}
+
+				&:hover {
+					background-color: $gray2;
+				}
+
+			}
+
+		.nav-search-mobile {
+			float: right;
+			width: 100%;
+
+			form {
+				margin-top: 5px;
+				margin-bottom: 15px;
+				display: block;
+				text-align:center;
+
+				input {
+					outline: none;
+				}
+
+				input[type=text] {
+						-webkit-appearance: textfield;
+						-webkit-box-sizing: content-box;
+						background: transparent url(img/search-icon.png) no-repeat 9px center;
+						color: black;
+						border: solid 1px $gray3;
+						padding: 9px 10px 9px 32px;
+						border-radius: 10em;
+						color: transparent;
+						cursor: pointer;
+						width: 85%;
+
+						&:hover {
+							background-color: #fff;
+						}
+
+						&:focus {
+							background-color: #fff;
+							color: #000;
+							cursor: auto;
+						}
+				}
+			}
+
+			input::-webkit-search-decoration, input::-webkit-search-cancel-button {
+					display: none; 
+			}
+
+		}
+
+	}
+
+	.navbar {
+		margin-bottom: 0px;
+	}
+
+	section.slider {
+		background-image: url("http://pipsum.com/1500x700.jpg");
+		width: 100%;
+		height: 200px;
+	}
+
+	section.moment {
+		width: 100%;
+
+		article {
+			margin-top: 20px;
+			
+			a {
+				color: $black;
+				
+				&:hover {
+					color:$red;
+					text-decoration: none;
+				}
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				cursor: pointer;
+				
+			}
+
+			p {
+				text-align: center;
+				font-size: $title-size1;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+
+	.content_home {
+		section.recipe {
+			background-color: $gray2;
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-right: 15px;
+			margin-left: 15px;
+			padding-right: 0;
+			padding-left: 0;
+			
+			h2 {
+				padding-top: 30px;
+				color: $red;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			p {
+				padding: 10px;
+				text-align: justify;	
+			}
+		
+			.moreread {
+				margin-bottom: 0;
+				@include gradient();
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				
+				a { 
+					cursor: pointer;
+					text-decoration: none;
+
+					&:hover {
+						color:$gray1;
+					}
+					p {
+						font-size: $title-size1;
+						color: $white;
+						text-decoration: none;
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		section.more_consult {
+
+			a {
+				color: black;
+				&:hover {
+					color: black;
+					text-decoration: none;
+				}
+			} 
+			
+			h2 {
+				@include gradient();
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				color: $white;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: $title-size1;
+				padding: 18px;
+				margin-bottom: 0px;
+			}
+
+			article.change {
+				background-color: $gray_consult;
+				overflow:hidden;
+
+			}
+
+
+			article {
+				background-color: $white;
+				overflow:hidden;
+				cursor: pointer;
+
+				&:last-child {
+					padding-bottom: 10px;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+
+				.left_picture{
+					float: left;
+					img {
+						border-radius: 2px;
+						margin-top: 10px;
+						margin-left: 10px;
+						margin-bottom: 10px;
+						background-color: $white;
+
+					}
+				}
+
+				.right_text{
+					padding: 10px;
+					h3 {
+						height: auto;
+						margin-left: 10px;
+						margin-right: 12px;
+						float: left;
+						color: $red;
+						text-align: center;
+						text-transform: uppercase;
+						font-size: 18px;
+						margin-top: 0px;
+						margin-bottom: 0px
+					}
+
+					p {
+						width: 100%;
+						margin-top: 0px;
+						margin-bottom: 0px;
+						padding-left: 10px;
+						padding-right: 10px;
+						margin-left: 5px; 
+					}
+
+				}
+			}
+		}
+	}
+      
+}
+
+/* TABLET */
+@media screen and (min-width: 750px) and (max-width: 992px) {
+	
+	/* NavBar - Menu */
+	nav {
+
+		background-color: $menu-color;
+		z-index: 2;
+
+		.nav-search {
+			float: right;
+
+			form {
+				margin-top: 8px;
+				margin-right: 10px;
+
+				input {
+					outline: none;
+				}
+
+				input[type=text] {
+						-webkit-appearance: textfield;
+						-webkit-box-sizing: content-box;
+						background: transparent url(img/search-icon.png) no-repeat 9px center;
+						color: black;
+						border: solid 1px transparent;
+						padding: 9px 10px 9px 32px;
+						border-radius: 10em;
+						@include transition(0.5s);
+						width: 20px;
+						padding-left: 10px;
+						color: transparent;
+						cursor: pointer;
+
+						&:hover {
+							background-color: #fff;
+						}
+
+						&:focus {
+							width: 130px;
+							background-color: #fff;
+							@include box-shadow(0 0 5px rgba(109,207,246,.5));
+							padding-left: 32px;
+							color: #000;
+							cursor: auto;
+						}
+				}
+			}
+
+			input::-webkit-search-decoration, input::-webkit-search-cancel-button {
+					display: none; 
+			}
+
+		}
+
+		.nav {
+			float: right;
+		}
+			
+			#hamb {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;  
+				cursor: pointer;  
+				height:100px;
+				margin: auto;
+				margin-top:35%;
+
+			}	
+
+			.icon-bar {
+				background-color: $black;
+				display: block;
+				width:100%;
+				height:20%;
+				transition:0.20s;
+				-webkit-transition:0.0s;  
+				-webkit-user-select: none;
+				-moz-user-select: none;    
+				-ms-user-select: none;      
+				user-select: none; 
+			}
+
+
+			.animate .icon-bar:nth-child(1) {
+			    transform:translateY(7px) rotate(135deg);
+			}
+
+			.animate .icon-bar:nth-child(2) {
+			    opacity: 0;
+			}
+
+			.animate .icon-bar:nth-child(3) {
+			    transform:translateY(-5px) rotate(-135deg);
+			}
+
+			.navbar-nav ul li.page_item {
+			    display: block;
+			    text-decoration: none;
+				font-size: 18px;
+				text-align: center;
+				float: left;
+				padding-right: 30px;
+
+				a {
+					text-decoration: none;
+				 	color: $black;
+				  	display: block;
+				
+					&:hover {
+						color: $red;
+					}
+				}
+
+			}
+	}
+
+	section.slider {
+		background-image: url("http://pipsum.com/1500x700.jpg");
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		display: block;
+		top: 0;
+	}
+
+
+	section.moment {
+		width: 100%;
+		margin-top: 250px;
+
+		article {
+			margin-top: 20px;
+			
+			a {
+				color: $black;
+				
+				&:hover {
+					color:$red;
+					text-decoration: none;
+				}
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				cursor: pointer;
+				
+			}
+
+			p {
+				text-align: center;
+				font-size: $title-size1;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	
+	.content_home {
+		section.recipe {
+			background-color: $gray2;
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-right: 15px;
+			margin-left: 15px;
+			padding-right: 0;
+			padding-left: 0;
+			
+
+
+			h2 {
+				padding-top: 30px;
+				color: $red;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			p {
+				padding: 10px;
+				text-align: justify;	
+			}
+		
+			.moreread {
+				margin-bottom: 0;
+				@include gradient();
+				
+				a { 
+					cursor: pointer;
+					text-decoration: none;
+
+					&:hover {
+						color:$gray1;
+					}
+					p {
+						font-size: $title-size1;
+						color: $white;
+						text-decoration: none;
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		section.more_consult {
+
+			a {
+				color: black;
+				&:hover {
+					color: black;
+					text-decoration: none;
+				}
+			} 
+			
+			h2 {
+				@include gradient();
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				color: $white;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: $title-size1;
+				padding: 18px;
+				margin-bottom: 0px;
+			}
+
+			article.change {
+				background-color: $gray_consult;
+				overflow:hidden;
+
+			}
+
+
+			article {
+				background-color: $white;
+				overflow:hidden;
+				cursor: pointer;
+
+				&:last-child {
+					padding-bottom: 10px;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+
+				.left_picture{
+					float: left;
+					img {
+						border-radius: 2px;
+						margin-top: 10px;
+						margin-left: 10px;
+						margin-bottom: 10px;
+						background-color: $white;
+
+					}
+				}
+
+				.right_text{
+					padding: 10px;
+					h3 {
+						height: auto;
+						margin-left: 10px;
+						margin-right: 12px;
+						float: left;
+						color: $red;
+						text-align: center;
+						text-transform: uppercase;
+						font-size: 18px;
+						margin-top: 0px;
+						margin-bottom: 0px
+					}
+
+					p {
+						width: 100%;
+						margin-top: 0px;
+						margin-bottom: 0px;
+						padding-left: 10px;
+						padding-right: 10px;
+						margin-left: 5px; 
+					}
+
+				}
+			}
+		}
+	}
+      
+}
+
+
+
+ 
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+	/* NavBar - Menu */
+	nav {
+
+		background-color: $menu-color;
+		z-index: 2;
+
+		.nav-search {
+			float: right;
+			
+			form {
+				margin-top: 8px;
+				margin-right: 10px;
+
+				input {
+					outline: none;
+				}
+
+				input[type=text] {
+						-webkit-appearance: textfield;
+						-webkit-box-sizing: content-box;
+						background: transparent url(img/search-icon.png) no-repeat 9px center;
+						color: black;
+						border: solid 1px transparent;
+						padding: 9px 10px 9px 32px;
+						border-radius: 10em;
+						@include transition(0.5s);
+						width: 20px;
+						padding-left: 10px;
+						color: transparent;
+						cursor: pointer;
+
+						&:hover {
+							background-color: #fff;
+						}
+
+						&:focus {
+							width: 130px;
+							background-color: #fff;
+							@include box-shadow(0 0 5px rgba(109,207,246,.5));
+							padding-left: 32px;
+							color: #000;
+							cursor: auto;
+						}
+				}
+			}
+
+			input::-webkit-search-decoration, input::-webkit-search-cancel-button {
+					display: none; 
+			}
+
+		}
+
+		.nav {
+			float: right;
+		}
+			
+			#hamb {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;  
+				cursor: pointer;  
+				height:100px;
+				margin: auto;
+				margin-top:35%;
+
+			}	
+
+			.icon-bar {
+				background-color: $black;
+				display: block;
+				width:100%;
+				height:20%;
+				transition:0.20s;
+				-webkit-transition:0.0s;  
+				-webkit-user-select: none;
+				-moz-user-select: none;    
+				-ms-user-select: none;      
+				user-select: none; 
+			}
+
+
+			.animate .icon-bar:nth-child(1) {
+			    transform:translateY(7px) rotate(135deg);
+			}
+
+			.animate .icon-bar:nth-child(2) {
+			    opacity: 0;
+			}
+
+			.animate .icon-bar:nth-child(3) {
+			    transform:translateY(-5px) rotate(-135deg);
+			}
+
+			.navbar-nav ul li.page_item {
+			    display: block;
+			    text-decoration: none;
+				font-size: 18px;
+				text-align: center;
+				float: left;
+				padding-right: 30px;
+
+				a {
+					text-decoration: none;
+				 	color: $black;
+				  	display: block;
+				
+					&:hover {
+						color: $red;
+					}
+				}
+
+			}
+
+	}
+
+
+
+	section.slider {
+		background-image: url("http://pipsum.com/1500x700.jpg");
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		display: block;
+		top: 0;
+	}
+
+
+	section.moment {
+		width: 100%;
+		margin-top: 250px;
+
+		article {
+			margin-top: 20px;
+			
+			a {
+				color: $black;
+				
+				&:hover {
+					color:$red;
+					text-decoration: none;
+				}
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				cursor: pointer;
+				
+			}
+
+			p {
+				text-align: center;
+				font-size: $title-size1;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+
+	.content_home {
+		section.recipe {
+			background-color: $gray2;
+			border-radius: 5px;
+			margin-top: 10px;
+			padding-right: 0;
+			padding-left: 0;			
+			h2 {
+				padding-top: 30px;
+				color: $red;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			p.content_recipe {
+				padding: 30px;
+				text-align: justify;	
+			}
+		
+			.moreread {
+				@include gradient();
+				cursor: pointer;
+				
+				a { 
+					cursor: pointer;
+					text-decoration: none;
+
+					&:hover {
+						color:$gray1;
+					}
+					p {
+						padding-top: 10px;
+						padding-bottom: 10px;
+						padding-right:30px;
+						font-size: $title-size1;
+						color: $white;
+						text-decoration: none;
+						text-align: right;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		section.more_consult {
+			margin-top: 10px;
+
+			a {
+				color: black;
+				&:hover {
+					color: black;
+					text-decoration: none;
+				}
+			} 
+			
+			h2 {
+				@include gradient();
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				color: $white;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: $title-size1;
+				padding: 18px;
+				margin-bottom: 0px;
+			}
+
+			article.change {
+				background-color: $gray_consult;
+				overflow:hidden;
+
+			}
+
+
+			article {
+				background-color: $white;
+				overflow:hidden;
+				cursor: pointer;
+
+				&:last-child {
+					padding-bottom: 10px;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+
+				.left_picture{
+					float: left;
+					img {
+						border-radius: 2px;
+						margin-top: 10px;
+						margin-left: 10px;
+						margin-bottom: 10px;
+						background-color: $white;
+
+					}
+				}
+
+				.right_text{
+					padding: 10px;
+					h3 {
+						height: auto;
+						margin-left: 10px;
+						margin-right: 12px;
+						float: left;
+						color: $red;
+						text-align: center;
+						text-transform: uppercase;
+						font-size: 18px;
+						margin-top: 0px;
+						margin-bottom: 0px
+					}
+
+					p {
+						width: 100%;
+						margin-top: 0px;
+						margin-bottom: 0px;
+						padding-left: 10px;
+						padding-right: 10px;
+						margin-left: 5px; 
+					}
+
+				}
+			}
+		}
+	}
+      
+}

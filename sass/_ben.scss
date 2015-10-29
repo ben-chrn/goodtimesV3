@@ -1,0 +1,326 @@
+html{
+    margin:0px !important;
+}
+
+body{
+    font-family: $font;
+    font-size:$title-size2;
+    color:black;
+    font-weight:400;
+}
+
+h2{
+    margin:0px;
+    line-height:100%;
+}
+
+.navbar{
+    border-radius:0px;
+}
+
+div.headerCategory{
+    margin-top:-75px;
+    background-size:cover;
+    width:100%;
+
+    .headerPic{
+        background: url("http://lorempixel.com/1920/300");
+        height:300px;
+
+    }
+
+    .navbarCategory{
+        font-family:$font;
+        font-size:$title-size1;
+        height:60px;
+        background: $white;
+        padding:0px;
+        color:$red;
+
+        -webkit-box-shadow: 0px -20px 80px 12px rgba(0,0,0,0.35);
+        -moz-box-shadow: 0px -20px 80px 12px rgba(0,0,0,0.35);
+        box-shadow: 0px -20px 80px 12px rgba(0,0,0,0.35);
+            
+        h2{
+            line-height: 60px;
+            text-transform: uppercase;
+            padding-left:15px;
+
+            @media screen and (max-width:$mobile){
+                font-size:$title-size2;
+            }
+        }
+    }
+}
+
+section.eventsList{
+    margin-top: 40px;
+    margin-bottom:40px;
+
+    article.eventItem{
+        background: $gray2;
+        padding:0px;
+
+        @media screen and (min-width: $desktop-min){
+            
+            border-radius: 0px 5px 5px 0px;
+        }
+
+        .eventThumbnail{
+            height:190px;
+            background:url('http://lorempixel.com/500/500');
+            background-size:cover;
+            border-radius:5px 5px 0 0;
+
+            @media screen and (max-width:$desktop-min) {
+                margin-bottom: 20px;
+            }
+            @media screen and (min-width:$desktop-min) and (max-width:$desktop-max){
+                height:211px;
+            }
+            @media screen and (min-width: $desktop-min){
+                margin-right:20px;
+                border-radius: 0;
+            }
+        }  
+        .eventContent{
+            padding: 20px 20px;
+            margin-bottom:15px;
+            .eventTitle{
+                font-size:$title-size2;
+                color:$red;
+                font-family:$font;
+                font-weight:400;
+                text-transform: uppercase;
+                margin:0px
+            }
+
+            .eventDescri{
+                font-family:$font-p;
+            }
+        }
+        aside.eventInfos{
+            width:100%;
+            height:40px;
+            @include gradient();
+
+            line-height:40px;
+            padding:0 20px;
+            border-radius:0 0 5px 5px;
+
+            @media screen and (min-width: $desktop-min){
+                line-height: 40px;
+            }
+            
+            .eventLength, .eventDate, .separator{
+                font-weight:700;
+                text-transform: uppercase;
+                color:$gray;
+            }
+
+            .readMore{
+                float:right;
+                font-family: $font;
+                font-size: $title-size2;
+                color:$gray;
+                text-decoration: underline;
+
+                &:hover{
+                    text-decoration:none;
+                }
+            }
+
+
+        }
+    }
+}
+
+section.sidebar{
+    margin-top:40px;
+    @media screen and (min-width:$desktop-min){
+        padding:0px 10px;
+    }
+    @media screen and (max-width:$desktop-min){
+        margin-top: 20px;
+    }
+    .searchbar{
+        height:50px;
+        background: $gray2;
+        padding:10px;
+        border-radius:5px 5px 0px 0px;
+
+        input.searchbarContent{
+            height:30px;
+            width:100%;
+            outline:none;
+            background:white;
+            border:solid 2px #b7b7b7;
+            padding: 0px 5px;
+            position:relative;
+        }
+        input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+            color:$red;
+            text-align: right;
+        }
+        input:-moz-placeholder, textarea:-moz-placeholder { 
+            color:$red;
+            text-align: right;
+        }
+        input::-moz-placeholder, textarea::-moz-placeholder { 
+            color:$red;
+            text-align: right;
+        }
+        input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+            color:$red;
+            text-align: right;
+        }
+    }
+
+    .categoriesContent{
+        background:$gray2;
+        border-radius:0 0 5px 5px;
+        margin:10px 0px;
+        h3{
+           
+           @include gradient();
+
+            font-family: $font;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: $title-size2;
+            width:100%;
+            height:45px;
+            margin:0;
+            color:$white;
+            line-height: 45px;
+            padding:0px 10px;
+        }
+        .categoriesList{
+            padding:10px 15px;
+            margin:0;
+            list-style:none;
+            font-family:$font;
+            a{
+                color:black;
+                padding:10px 0px;
+                &:hover{
+                    text-decoration: underline;
+                }
+                li{
+                    height:25px;
+                    line-height: 25px;
+                    margin-bottom:5px;
+                    img{
+                        margin-right:10px;
+                    }
+                }
+            }
+           
+        }
+    }
+}
+
+.singleLeft{
+    padding:0 10px;
+    .singleEventItem{
+        background: $gray2;
+        border-radius:5px;
+        margin-top: 40px;
+        padding:0px;
+
+        .singleEventHeader{
+            @include gradient();
+            border-radius:5px 5px 0px 0px;
+            height:40px;
+            h2{
+                line-height: 40px;
+                padding-left:10px;
+                font-weight:400;
+                font-family:$font;
+                color:$gray2;
+                font-size:$title-size2;
+                text-transform: uppercase;
+            }
+        }
+
+        .singleEventThumbnail{
+            padding:0px;
+            .bgimage{
+                background-image: url('http://lorempixel.com/200/200');
+                background-size: cover;
+                width:100%;
+                height:200px;
+            }
+        }
+
+        .singleEventContent{
+            padding:10px;
+            font-family: $font-p;
+
+            .singleEventInfos{
+                @media screen and (max-width:$desktop-min){
+                    padding:0px;
+                    padding-top:10px !important;
+                }
+
+                ul{
+                    list-style:none;
+                    padding:0px;
+                    margin:0px;
+                    span{
+                        text-transform: uppercase
+                    }
+                    li{
+                        padding-left:10px;
+                        font-family: $font-p;
+                        @media screen and (max-width:$mobile){
+                            padding-left:0px;
+                        }
+                    }
+
+                }
+
+                .metadata{
+                    float:right;
+                    text-align: right;
+                    text-transform: uppercase;
+                    .red{
+                        color:$red !important;
+                    }
+                }
+            }
+
+            .singleEventTxt{
+                padding:10px 0px;
+                p{
+                    margin:0;
+                }
+            }
+        }
+    }
+}
+
+
+.singleSidebar{
+    ul{
+        padding:10px !important;
+        li{
+            margin-bottom:5px;
+            padding:5px;
+            width:100%;
+            @include gradient();
+            border-radius:5px;
+            height:50px !important;
+            color:$gray !important;
+            a{
+                
+                text-transform: uppercase;
+                padding-left:10px;
+                font-size: 12px;
+            }
+        }
+    }
+    
+}
+
+
