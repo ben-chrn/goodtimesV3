@@ -29,10 +29,10 @@
                 <div class="singleEventInfos col-xs-12 col-md-9">
                     <ul class="ingredients col-xs-6">
                         <span>Ingrédients :</span>
-                        <li>Ingrédient</li>
-                        <li>Ingrédient</li>
-                        <li>Ingrédient</li>
-                        <li>Ingrédient</li>
+                        <li><i class="fa fa-check"></i>Ingrédient</li>
+                        <li><i class="fa fa-check"></i>Ingrédient</li>
+                        <li><i class="fa fa-check"></i>Ingrédient</li>
+                        <li><i class="fa fa-check"></i>Ingrédient</li>
                     </ul>
                     <ul class="metadata col-xs-6">
                         <li><span class="red">Postée le : </span>12/12/12</li>

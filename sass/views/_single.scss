@@ -69,8 +69,7 @@ h2{
                     padding-top:10px !important;
                 }
 
-                ul{
-                    list-style:none;
+                ul{ 
                     padding:0px;
                     margin:0px;
                     span{
@@ -81,6 +80,9 @@ h2{
                         font-family: $font-p;
                         @media screen and (max-width:$mobile){
                             padding-left:0px;
+                        }
+                        i{
+                            margin-right:10px;
                         }
                     }
 
