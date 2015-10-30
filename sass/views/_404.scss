@@ -1,0 +1,16 @@
+.error404 {
+	p.error {
+		color: $red;
+		font-size: 100px;
+		text-align: center;	
+	}
+ 	
+	p {
+		text-align: center;
+		font-size: 30px;
+
+	 	a {
+			color: $red;
+		}
+	}
+}
