@@ -155,16 +155,14 @@
 						color: transparent;
 						cursor: pointer;
 
-						&:hover {
-							border-color: $black;
-						}
-
 						&:focus {
 							width: 130px;
 							background-color: $gray1;
 							padding-left: 32px;
 							cursor: auto;
 							color: $black !important;
+							border-color: $black;
+
 						}
 				}
 			}
