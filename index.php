@@ -19,20 +19,20 @@
             <div class="row">       
                 <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">  
                     <a href="#">
-                        <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+                        <img src="http://pipsum.com/300x240.jpg"></img>
                         <p>Matinée</p>
                     </a>
                 </article>
                 <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 day">
                     <a href="#">
-                        <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+                        <img src="http://pipsum.com/300x240.jpg"></img>
                         <p>Journée</p>
                     </a>
                 </article>
 
                 <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 night">
                     <a href="#">
-                        <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+                        <img src="http://pipsum.com/300x240.jpg"></img>
                         <p>Soirée</p>
                     </a>
                 </article>

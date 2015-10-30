@@ -1,0 +1,40 @@
+/* FONTS */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+@font-face {
+		font-family: 'AvenirDemi';
+		src: url('fonts/AvenirNextLTPro-demi.eot');
+		src: url('fonts/AvenirNextLTPro-demi.eot?#iefix') format('embedded-opentype'),
+				 url('fonts/AvenirNextLTPro-demi.woff') format('woff'),
+				 url('fonts/AvenirNextLTPro-demi.ttf') format('truetype');
+		font-weight: 200; 
+		font-style: normal;
+
+}
+
+
+@font-face {
+		font-family: 'AvenirRegular';
+		src: url('fonts/AvenirNextLTPro-Regular.eot');
+		src: url('fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+				 url('fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+				 url('fonts/AvenirNextLTPro-Regular.ttf') format('truetype');
+		font-weight: 200; 
+		font-style: normal;
+
+}
+
+
+
+
+/* Fonts size */
+
+$title-size1 : 18px;
+$title-size2 : 15px;
+$font : "AvenirRegular";
+$font-p : "Open Sans";
+
+
