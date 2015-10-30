@@ -3239,3 +3239,14 @@ footer {
   font-size: 18px;
   text-align: center;
   font-family: Quicksand; }
+
+.error404 p.error {
+  color: #a11526;
+  font-size: 80px;
+  text-align: center; }
+
+.error404 p {
+  text-align: center;
+  font-size: 30px; }
+  .error404 p a {
+    color: #a11526; }
