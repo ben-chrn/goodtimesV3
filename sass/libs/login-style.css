@@ -1,0 +1,103 @@
+body.login {
+  background-image: url('../../img/background_login.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.login h1 a {
+  background-image: url('../../img/logo.png');
+  background-size: cover;
+  width: 250px !important;
+  height: 80px !important;
+  margin-bottom: 10px !important;
+  margin-top: 45px !important;
+}
+
+#backtoblog {
+    left: 0;
+    margin: 0 !important;
+    padding: 10px !important;
+    position: fixed;
+    text-align: left;
+    text-shadow: 0 0 0 !important;
+    top: 0;
+    width: 100%;
+    background: rgba(34,34,34,0.75); 
+
+}
+ 
+.login #backtoblog a {
+    color: white !important;
+}
+
+form#loginform {
+    background: rgba(34,34,34,0.80) !important; 
+}
+
+form#loginform p label {
+    color: white !important;
+}
+
+form#loginform p.submit input.button {
+    background-color: #a11526;
+    border: none !important; 
+}
+
+form#loginform p.submit input.button:focus {
+    outline:none !important;
+    border:1px solid #a11526 !important;
+}
+
+
+p#nav a  {
+    color: #a11526 !important;
+}
+
+p.message {
+    background: rgba(34,34,34,0.75) !important; 
+    color:white !important; 
+    border-left-color: #a11526 !important; 
+}
+
+form#lostpasswordform {
+    background: rgba(34,34,34,0.80) !important;
+}
+
+form#lostpasswordform p label {
+    color: white !important;
+}
+
+form#lostpasswordform p.submit input.button {
+    background-color: #a11526;
+    border: none !important; 
+}
+
+input#user_login:focus {
+    border: 1px solid white !important; 
+}
+
+input#user_pass:focus {
+    border: 1px solid white !important;     
+}
+
+input#wp-submit {
+	border: 1px solid white !important; 
+}
+
+input#wp-submit:focus {
+	border: 1px solid white !important; 
+}
+
+input#wp-submit.button.button-primary.button-large:active {
+	border: 1px solid white !important; 
+}
+
+
+input[type=checkbox]#rememberme {
+	border: 1px solid white;
+}
+
+input[type=checkbox]:checked:before {
+	color: #a11526;
+}
