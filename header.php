@@ -10,10 +10,6 @@
     <link href="<?php echo get_template_directory_uri() ?>/style.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="<?php bloginfo('template_url'); ?>/lib/owl-carousel/owl.carousel.css"/>
-    
-    <script src="<?php bloginfo('template_url');?>/lib/jquery/dist/jquery.min.js"></script>
-    <script src="<?php bloginfo('template_url');?>/lib/owl-carousel/owl.carousel.min.js"></script>
-    <script src="<?php bloginfo('template_url');?>/js/app.js"></script>
   </head>
   
   <header>   

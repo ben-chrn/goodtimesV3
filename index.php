@@ -4,10 +4,10 @@
 <body>
     <section class="slider">
     <?php
-        $args = array( 'post_type' => "Recettes", 'posts_per_page' => 5);
+        $args = array( 'post_type' => "Recettes", 'posts_per_page' => 3);
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post();
-                the_post_thumbnail('medium');
+                the_post_thumbnail('slider');
             endwhile;
         ?>
     </section>        
