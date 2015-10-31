@@ -2,13 +2,18 @@
 
 <?php get_header(); ?>
 <body>
-<!--     <div id="#slider" class="owl-carousel">
-        <div class="item"><img src="http://pipsum.com/1000x300.jpg" alt="slide1"></div>
-        <div class="item"><img src="http://pipsum.com/1000x300.jpg" alt="slide1"></div>
-    </div> -->
+    <section class="slider">
+    <?php
+        $args = array( 'post_type' => "Recettes", 'posts_per_page' => 3);
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+                the_post_thumbnail('slider');
+            endwhile;
+        ?>
+    </section>        
     <div class="container">
         <section class="moment">
-            <div class="row">       
+            <div class="row">  
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 morning">  
                     <h3>Matinée</h3>
                     <div class="hover-effect">    

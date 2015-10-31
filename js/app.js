@@ -22,5 +22,15 @@ $(document).ready(function() {
         }, 'slow');
         return false;
     });
+
+  $(".slider").owlCarousel({
+ 
+      autoPlay: true,
+      navigation : false, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+  });
+ 
 });
 

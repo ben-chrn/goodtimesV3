@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">   
     <title><?php bloginfo('name') ?> <?php wp_title('|', true, 'left') ?></title>
-
+    <?php wp_head(); ?>
     <!-- CSS -->
     <link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="<?php bloginfo('template_url'); ?>/sass/libs/own-carousel/owl.carousel.css"/>
-    <link href="<?php bloginfo('template_url'); ?>/sass/libs/own-carousel/owl.theme.css"/>
-    <link href="<?php bloginfo('template_url'); ?>/sass/libs/own-carousel/owl.transitions.css"/>
 
 
     <!-- FAVICON -->
