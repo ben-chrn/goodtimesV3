@@ -1,4 +1,12 @@
+
 $(document).ready(function() {
+  
+  $("#slider").owlCarousel({
+    navigation : true,
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem:true
+  });
 
   $('#hamb').click( function() {
   
@@ -10,9 +18,9 @@ $(document).ready(function() {
     $('a[href^="#"]').click(function(){
       var the_id = $(this).attr("href");
       $('html, body').animate({
-        scrollTop:$(the_id).offset().top
-      }, 'slow');
-      return false;
+          scrollTop:$(the_id).offset().top
+        }, 'slow');
+        return false;
     });
 });
 
