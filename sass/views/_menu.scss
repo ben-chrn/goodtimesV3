@@ -1,8 +1,19 @@
 /* MENU */
 
-.navbar-brand {
-	text-transform: uppercase;
+
+
+a {
+	color: $black;
+	
+	&:hover {
+		color: $black;
+	}
+
+	.navbar-brand {
+		text-transform: uppercase;
+	}
 }
+
 
 /* MOBILE */
 @media screen and (min-width: 0px) and (max-width: 750px) {

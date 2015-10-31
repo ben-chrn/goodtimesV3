@@ -1,6 +1,6 @@
 /*
 	Theme Name: Goodtimes
-	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
+	Author: Eden Bitton, Noémie Ferret, Benjamin Chareyron, Mathieu Levi, Rémi Bonnet.
 */
 
 @import "libs/_normalize.scss";
@@ -17,13 +17,14 @@
 body{
     font-family: $font;
     font-size:$title-size2;
-    color:black;
+    color: $black;
     font-weight:100;
 }
  
 p {
 	font-family:$font-p;
 }
+
 
 /* ############ */
 

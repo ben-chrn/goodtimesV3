@@ -17,24 +17,31 @@
     <div class="container">
         <section class="moment">
             <div class="row">       
-                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">  
-                    <a href="#">
-                        <img src="http://pipsum.com/300x240.jpg"></img>
-                        <p>Matinée</p>
-                    </a>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 morning">  
+                    <h3>Matinée</h3>
+                    <div class="hover-effect">    
+                        <a href="#" class="hover-text">
+                            <p><span>Découvrez nos recettes</span></p>
+                        </a>
+                    </div>
                 </article>
-                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 day">
-                    <a href="#">
-                        <img src="http://pipsum.com/300x240.jpg"></img>
-                        <p>Journée</p>
-                    </a>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day">
+                    <h3>Journée</h3>
+                    <div class="hover-effect">
+                        <a href="#" class="hover-text">
+                            <p><span>Découvrez nos recettes</span></p>
+                        </a>
+                    </div>
+                </article>
                 </article>
 
-                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 night">
-                    <a href="#">
-                        <img src="http://pipsum.com/300x240.jpg"></img>
-                        <p>Soirée</p>
-                    </a>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 night">
+                    <h3>Soirée</h3>
+                    <div class="hover-effect">
+                        <a href="#" class="hover-text">
+                            <p><span>Découvrez nos recettes</span></p>
+                        </a>
+                    </div>
                 </article>
             </div>
         </section>
@@ -42,9 +49,9 @@
         <div class="clear"></div>
 
             <div class="content_home">
-                    <section class="col-md-6 col-lg-6 recipe">
-                        <img src="http://pipsum.com/200x200.jpg" class="dayRecipee_thumbnail img-circle col-xs-12 col-md-3">
-                        <h2>La recette du jour !</h2>
+                    <section class="col-md-5 col-lg-5 recipe">
+<!--                         <img src="http://pipsum.com/200x200.jpg" class="dayRecipee_thumbnail col-xs-12 col-md-3">
+ -->                        <h2>La recette du jour !</h2>
                         <p class="content_recipe">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -62,7 +69,7 @@
 
                     </section>
 
-                    <section class="col-md-6 col-lg-6 more_consult">
+                    <section class="col-md-6 col-lg-6 col-md-offset-1 col-lg-offset-1 more_consult">
 
 
                         <h2>Les plus consultés</h2>

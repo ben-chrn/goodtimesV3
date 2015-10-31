@@ -24,7 +24,9 @@
               <span class="icon-bar"></span>
             </div>
             </button>
-            <div class="navbar-brand"> <?php bloginfo('name'); ?></div>
+            <a href="<?php get_home_url(); ?>">
+              <div class="navbar-brand"><?php bloginfo('name'); ?></div>
+            </a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
              <div class="hidden-mobile nav-search">
