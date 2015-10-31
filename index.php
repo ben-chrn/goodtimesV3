@@ -4,19 +4,17 @@
 <body>
     <section class="slider">
     <?php
-        $args = array( 'post_type' => "Recettes", 'posts_per_page' => 5 );
+        $args = array( 'post_type' => "Recettes", 'posts_per_page' => 5);
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post();
-                the_title();
-                the_post_thumbnail('medium');
-                the_excerpt();
+                the_post_thumbnail('slider');
             endwhile;
         ?>
     </section>        
                   
     <div class="container">
         <section class="moment">
-            <div class="row">       
+            <div class="row">  
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 morning">  
                     <h3>Matinée</h3>
                     <div class="hover-effect">    
