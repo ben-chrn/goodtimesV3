@@ -2,10 +2,12 @@
     </div>
 
     <footer>
-        <div>
-        © Good Times 2015 <br>
-        Réalisé par la Bonne Équipe
-        </div>
+            <div class="col-md-10">
+                <p><span>© <?php bloginfo('name'); ?> 2015 </span> - Réalisé par la P2018 HÉTIC</p>
+            </div>
+            <div class="hidden-mobile col-md-2">
+                <p><a href="#top">Retour en haut</a><p>
+            </div>
     </footer>
 
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
