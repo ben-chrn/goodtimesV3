@@ -7,7 +7,7 @@
         $args = array( 'post_type' => "Recettes", 'posts_per_page' => 5);
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post();
-                the_post_thumbnail('slider');
+                the_post_thumbnail('medium');
             endwhile;
         ?>
     </section>        

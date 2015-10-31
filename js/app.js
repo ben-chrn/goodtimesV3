@@ -15,7 +15,7 @@ $(document).ready(function() {
       return false;
     });
 
-    $(".slider").owlCarousel({
+  $(".slider").owlCarousel({
  
       navigation : true, // Show next and prev buttons
       slideSpeed : 300,
