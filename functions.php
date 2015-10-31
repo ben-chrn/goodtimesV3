@@ -25,6 +25,17 @@ function create_post_type(){
       )
     );
 
+  register_post_type('equipe',
+    array(
+      'labels'=>array(
+        'name' => __("L'Equipe"),
+        'singular_name' => __("L'Equipe")
+        ),
+      'public' => true,
+      'supports' => array('title', 'thumbnail'),
+      )
+    );
+
   register_taxonomy(
     'type',
     'recette',
@@ -38,5 +49,5 @@ function create_post_type(){
 add_theme_support('post-thumbnails');
 add_image_size('img_liste', 270, 220, array('center','top')); 
 add_image_size('home', 370, 220, true);
-add_image_size('slider', 1500, 600, true);
+add_image_size('slider', 1500, 600, array('center', 'top'));
 ?>

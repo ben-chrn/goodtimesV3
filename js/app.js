@@ -17,11 +17,15 @@ $(document).ready(function() {
 
   $(".slider").owlCarousel({
  
-      autoPlay: true,
-      navigation : false, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
+    autoPlay : 3000,
+    stopOnHover : true,
+    navigation:false,
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+    singleItem : true,
+    autoHeight : true,
+    transitionStyle:"fade",
+    responsive: true
   });
  
 });
