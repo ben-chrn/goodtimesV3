@@ -2942,9 +2942,7 @@ section.moment {
       -webkit-transition: 0.5s;
       transition: 0.5s; }
     .content_home section.more_consult article:last-child {
-      padding-bottom: 10px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px; }
+      padding-bottom: 10px; }
     .content_home section.more_consult article .left_picture {
       float: left; }
       .content_home section.more_consult article .left_picture img {
@@ -2985,7 +2983,9 @@ section.moment {
     margin-right: 15px;
     margin-left: 15px;
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+  .content_home section.more_consult {
+    margin-top: 40px; } }
 
 /* TABLET */
 @media screen and (min-width: 750px) and (max-width: 992px) {
