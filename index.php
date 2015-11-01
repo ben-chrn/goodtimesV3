@@ -4,11 +4,17 @@
 <body><br>
     <section class="slider">
     <?php
-        $args = array( 'post_type' => "recette", 'posts_per_page' <= 2);
+        $args = array( 'post_type' => "recette", 'posts_per_page' >= 3);
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <a href="<?php the_permalink();?>"><?php the_post_thumbnail('slider');?> </a><?php
-            endwhile;
+                <div>
+                    <a href="<?php the_permalink();?>"><?php
+                        if ( has_post_thumbnail() ) // check if the post has a Post Thumbnail assigned to it.
+                        the_post_thumbnail();
+                         ?></a>
+                </div>
+
+            <?php endwhile;
             wp_reset_postdata();
         ?>
     </section>        
