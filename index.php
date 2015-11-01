@@ -4,10 +4,10 @@
 <body><br>
     <section class="slider">
     <?php
-        $args = array( 'post_type' => "recette", 'posts_per_page' => 3);
+        $args = array( 'post_type' => "recette", 'posts_per_page' <= 3);
             $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post();
-                the_post_thumbnail('slider');
+            while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <a href="<?php the_permalink();?>"><?php the_post_thumbnail('slider');?> </a><?php
             endwhile;
         ?>
     </section>        
