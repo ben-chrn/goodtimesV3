@@ -7,12 +7,15 @@
 </div>
 
 <?php while(have_posts()) : the_post() ?>
-
 <div class="headerCategory">
-    <div class="headerPic"></div>
+
+    <?php $terms=get_the_terms($post->ID, 'type'); $term_id=$terms[0]->term_taxonomy_id;  ?>
+    <?php $url = get_taxonomy_image( $term_id ); ?>
+
+    <div class="headerPic" style="background-image:url(<?php echo $url ?>)"></div>
     <div class="navbarCategory">
         <div class="container">
-        <h2><?php the_terms($post->ID, 'type','');  ?> > <?php the_title(); ?> </h2>
+        <h2><?php the_terms($post->ID, 'type',''); ?> > <?php the_title(); ?> </h2>
         </div>
     </div>
     </div>
@@ -33,7 +36,22 @@
                     <ul class="ingredients col-xs-6">
 
                         <span>Ingrédients :</span>
-                        <li><i class="fa fa-check"></i><?php $values = get_post_custom_values("ingredients"); echo $values[0]; ?></li>
+                       <!--  <li>
+                            $post_objects = get_field('post_objects');
+                        </li> -->
+
+                        <?php $post_objects = get_field('ingredients');
+
+                        if( $post_objects): ?>
+                            <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+                                <?php setup_postdata($post); ?>
+                                <li>
+                                    <i class="fa fa-check"></i><?php the_title(); ?></span>     
+                                </li>
+                            <?php endforeach; ?>
+                            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                        <?php endif; ?>
+
                         <!-- <li><i class="fa fa-check"></i>Ingrédient</li>
                         <li><i class="fa fa-check"></i>Ingrédient</li>
                         <li><i class="fa fa-check"></i>Ingrédient</li> -->
@@ -65,12 +83,30 @@
             </input>
         </div>
         <div class="categoriesContent">
-            <h3>Recettes similaires</h3>
+
+            <h3>Autres articles</h3>
             <ul class="categoriesList">
-                <a href=""><li class="categoriesItem"><img src="http://lorempixel.com/40/40">Recette similaire</li></a>
-                <a href=""><li class="categoriesItem"><img src="http://lorempixel.com/40/40">Recette similaire</li></a>
-                <a href=""><li class="categoriesItem"><img src="http://lorempixel.com/40/40">Recette similaire</li></a>
+
+                <?php
+                     $queryObject = new WP_Query( 'post_type=recette&posts_per_page=5' );
+                     // The Loop!if ($queryObject->have_posts()) {
+                    ?>
+                    <ul>
+                    <?php
+                    while ($queryObject->have_posts()) {
+                        $queryObject->the_post();
+                        ?>
+                        <li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('otherArticles'); ?><?php the_title(); ?></a></li>
+                    <?php
+                    }
+                    ?>
             </ul>
+
+<!-- 
+                <a href=""><li class="categoriesItem"><img src="http://lorempixel.com/40/40">Recette similaire</li></a>
+                <a href=""><li class="categoriesItem"><img src="http://lorempixel.com/40/40">Recette similaire</li></a>
+                <a href=""><li class="categoriesItem"><img src="http://lorempixel.com/40/40">Recette similaire</li></a>
+            </ul> -->
         </div>
     </section>
 
