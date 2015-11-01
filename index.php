@@ -9,6 +9,7 @@
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <a href="<?php the_permalink();?>"><?php the_post_thumbnail('slider');?> </a><?php
             endwhile;
+            wp_reset_postdata();
         ?>
     </section>        
     <div class="container">
@@ -45,44 +46,54 @@
         
         <div class="clear"></div>
 
-            <div class="content_home">
-                    <section class="col-md-5 col-lg-5 recipe">
-<!--                         <img src="http://pipsum.com/200x200.jpg" class="dayRecipee_thumbnail col-xs-12 col-md-3">
- -->                        <h2>La recette du jour !</h2>
-                        <p class="content_recipe">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+        <div class="content_home">
+            <section class="col-md-5 col-lg-5 recipe">
+                  <h2>La recette du jour !</h2><br>
+                     <?php
+                        $args = array( 'post_type' => "recette", 'orderby' => 'rand', 'posts_per_page' => '1');
+                        
+                        $loop = new WP_Query( $args );
+                        while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-                        <div class="moreread">
-                            <a href="#">
-                                <p>Lire la suite</p>
+                            <a href="<?php the_permalink();?>">
+                            <?php the_post_thumbnail(array(100,100) , array( 'class' => 'dayRecipee_thumbnail col-xs-12 col-md-3' ) ); ?>
+                            <p class="content_recipe">
+                                <?php the_excerpt(); ?>
+                             </p>
                             </a>
-                        </div>
+                    <div class="moreread">
+                        <a href="<?php the_permalink(); ?>">
+                            <p>Lire la suite</p>
+                        </a>
+                    </div>
+                    <?php endwhile;
+                    wp_reset_postdata();
+                ?>
+            </section>
 
-                    </section>
+            <section class="col-md-6 col-lg-6 col-md-offset-1 col-lg-offset-1 more_consult">
+                 <h2>Les plus consultés</h2>
 
-                    <section class="col-md-6 col-lg-6 col-md-offset-1 col-lg-offset-1 more_consult">
-
-
-                        <h2>Les plus consultés</h2>
-                            <a href="#">
-                                <article>
-                                    <div class="left_picture">
-                                        <img src="http://pipsum.com/80x80.jpg"/>
-                                    </div>
-                                    <div class="right_text">
-                                        <h3>Titre</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-                                        </p>
-                                    </div>
-                                </article>
-                            </a>
+                  <?php
+                   // query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
+                   // if (have_posts()) : while (have_posts()) : the_post(); ?>
+                      <!--   <a href="<?php the_permalink(); ?>">
+                            <article>
+                                <div class="left_picture">
+                                    <img src="http://pipsum.com/80x80.jpg"/>
+                                </div>
+                                <div class="right_text"> -->
+                                    <!-- <h3><?php the_title(); ?></h3>
+                                    <p>
+                                        <?php the_excerpt(); ?>
+                                    </p>
+                                </div> -->
+                           <!--  </article>
+                        </a>
+                        <?php
+                           // endwhile; endif;
+                            wp_reset_query();
+                   ?> -->
                             <a href="#">    
                                 <article class="change">
                                     <div class="left_picture">
