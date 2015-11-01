@@ -48,6 +48,13 @@ function create_post_type(){
 
 add_theme_support('post-thumbnails');
 add_image_size('img_liste', 270, 220, array('center','top')); 
-add_image_size('home', 370, 220, true);
+add_image_size('home', 370, 220, true); 
 add_image_size('slider', 1500, 600, array('center', 'top'));
+
+// Changer page login 
+function my_custom_login() {
+echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/sass/libs/login-style.css" />';
+}
+add_action('login_head', 'my_custom_login');
+
 ?>

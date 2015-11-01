@@ -11,7 +11,6 @@
             endwhile;
         ?>
     </section>        
-                  
     <div class="container">
         <section class="moment">
             <div class="row">  
