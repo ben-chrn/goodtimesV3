@@ -2775,7 +2775,8 @@ a {
     margin-bottom: 0px; } }
 
 section.slider {
-  width: 100%; }
+  width: 100%;
+  display: inline-block; }
 
 #slider .item img {
   display: block;

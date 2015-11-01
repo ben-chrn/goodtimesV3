@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $(".slider").owlCarousel({
  
-    autoPlay : false,
+    autoPlay : true,
     stopOnHover : true,
     navigation:false,
     paginationSpeed : 1000,
