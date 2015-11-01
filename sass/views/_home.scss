@@ -212,11 +212,11 @@ section.moment {
 
 			.right_text{
 				padding: 10px;
+				float: right;
 				h3 {
 					height: auto;
 					margin-left: 10px;
 					margin-right: 12px;
-					float: left;
 					color: $red;
 					text-align: center;
 					text-transform: uppercase;
