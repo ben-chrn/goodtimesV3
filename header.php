@@ -7,10 +7,10 @@
     <title><?php bloginfo('name') ?> <?php wp_title('|', true, 'left') ?></title>
     <?php wp_head(); ?>
     <!-- CSS -->
-
-    <link href="<?php echo get_template_directory_uri() ?>/style.css" rel="stylesheet" media="screen">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="<?php echo get_template_directory_uri() ?>/style.css" rel="stylesheet" media="screen">
 
 
 

@@ -50,7 +50,6 @@ h2{
         .singleEventThumbnail{
             padding:0px;
             .bgimage{
-                background-image: url('http://lorempixel.com/200/200');
                 background-size: cover;
                 width:100%;
                 height:200px;
@@ -101,6 +100,11 @@ h2{
                 padding:10px 0px;
                 p{
                     margin:0;
+                    margin-bottom: 10px;
+
+                    &:last-child{
+                        margin-bottom:0px;
+                    }
                 }
             }
         }
@@ -122,7 +126,7 @@ h2{
 
 .singleSidebar{
     ul{
-        padding:10px !important;
+        padding:5px !important;
         li{
             margin-bottom:5px;
             padding:5px;
@@ -134,8 +138,14 @@ h2{
             a{
                 
                 text-transform: uppercase;
-                padding-left:10px;
+                color:$gray !important;
                 font-size: 12px;
+            }
+            img{
+                max-width:40px;
+                max-height:40px;
+                border-radius:5px;
+                margin-right:10px;
             }
         }
     }
