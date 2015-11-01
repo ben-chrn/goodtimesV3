@@ -1,3 +1,5 @@
+<?php /* Template Name: page-proposer-une-recette.php */ ?>
+
 <?php acf_form_head(); ?>
 
 <?php get_header(); ?>

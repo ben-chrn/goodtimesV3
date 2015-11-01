@@ -112,6 +112,10 @@ section.moment {
 		background-color: $gray1;
 		border-radius: 5px;
 
+		a {
+			text-decoration: none;
+		}
+
 		h2 {
 			padding-top: 30px;
 			color: $red;
@@ -122,7 +126,7 @@ section.moment {
 		}
 		p {
 			padding: 10px;
-			text-align: justify;	
+			text-align: justify;
 		}
 
 		.moreread {
