@@ -192,8 +192,6 @@ section.moment {
 
 			&:last-child {
 				padding-bottom: 10px;
-				border-bottom-left-radius: 5px;
-				border-bottom-right-radius: 5px;
 			}
 
 			.left_picture{
@@ -255,6 +253,10 @@ section.moment {
 			padding-right: 0;
 			padding-left: 0;
 		}
+
+		section.more_consult {
+			margin-top: 40px;
+		}
 	}
       
 }
@@ -274,7 +276,6 @@ section.moment {
 			padding-right: 0;
 			padding-left: 0;
 		}
-
 	}
       
 }
