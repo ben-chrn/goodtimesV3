@@ -2804,12 +2804,12 @@ section.moment {
         margin-bottom: 10px;
         background-color: white; }
     .content_home section.more_consult article .right_text {
-      padding: 10px; }
+      padding: 10px;
+      float: right; }
       .content_home section.more_consult article .right_text h3 {
         height: auto;
         margin-left: 10px;
         margin-right: 12px;
-        float: left;
         color: #a11526;
         text-align: center;
         text-transform: uppercase;
@@ -2976,7 +2976,6 @@ h2 {
     .singleLeft .singleEventItem .singleEventThumbnail {
       padding: 0px; }
       .singleLeft .singleEventItem .singleEventThumbnail .bgimage {
-        background-image: url("http://lorempixel.com/200/200");
         background-size: cover;
         width: 100%;
         height: 200px; }
@@ -3010,7 +3009,10 @@ h2 {
       .singleLeft .singleEventItem .singleEventContent .singleEventTxt {
         padding: 10px 0px; }
         .singleLeft .singleEventItem .singleEventContent .singleEventTxt p {
-          margin: 0; }
+          margin: 0;
+          margin-bottom: 10px; }
+          .singleLeft .singleEventItem .singleEventContent .singleEventTxt p:last-child {
+            margin-bottom: 0px; }
     .singleLeft .singleEventItem .singleEventMetaInfos {
       background: #373737;
       /* Old browsers */
@@ -3038,7 +3040,7 @@ h2 {
         font-size: 18px; }
 
 .singleSidebar ul {
-  padding: 10px !important; }
+  padding: 5px !important; }
   .singleSidebar ul li {
     margin-bottom: 5px;
     padding: 5px;
@@ -3064,15 +3066,19 @@ h2 {
     color: #fbfbfb !important; }
     .singleSidebar ul li a {
       text-transform: uppercase;
-      padding-left: 10px;
+      color: #fbfbfb !important;
       font-size: 12px; }
+    .singleSidebar ul li img {
+      max-width: 40px;
+      max-height: 40px;
+      border-radius: 5px;
+      margin-right: 10px; }
 
 div.headerCategory {
-  margin-top: -75px;
   background-size: cover;
   width: 100%; }
   div.headerCategory .headerPic {
-    background: url("http://lorempixel.com/1920/300");
+    background-size: cover;
     height: 300px; }
   div.headerCategory .navbarCategory {
     font-family: "AvenirRegular";
@@ -3094,53 +3100,42 @@ div.headerCategory {
         div.headerCategory .navbarCategory h2 {
           font-size: 15px; } }
 
-w
 section.eventsList {
   margin-bottom: 40px; }
-  w
-section.eventsList article.eventItem {
+  section.eventsList article.eventItem {
     background: #e7e7e7;
     padding: 0px; }
     @media screen and (min-width: 992px) {
-      w
-section.eventsList article.eventItem {
+      section.eventsList article.eventItem {
         border-radius: 0px 5px 5px 0px; } }
-    w
-section.eventsList article.eventItem .eventThumbnail {
+    section.eventsList article.eventItem .eventThumbnail {
       height: 190px;
       background: url("http://lorempixel.com/500/500");
       background-size: cover;
       border-radius: 5px 5px 0 0; }
       @media screen and (max-width: 992px) {
-        w
-section.eventsList article.eventItem .eventThumbnail {
+        section.eventsList article.eventItem .eventThumbnail {
           margin-bottom: 20px; } }
       @media screen and (min-width: 992px) and (max-width: 1200px) {
-        w
-section.eventsList article.eventItem .eventThumbnail {
+        section.eventsList article.eventItem .eventThumbnail {
           height: 211px; } }
       @media screen and (min-width: 992px) {
-        w
-section.eventsList article.eventItem .eventThumbnail {
+        section.eventsList article.eventItem .eventThumbnail {
           margin-right: 20px;
           border-radius: 0; } }
-    w
-section.eventsList article.eventItem .eventContent {
+    section.eventsList article.eventItem .eventContent {
       padding: 20px 20px;
       margin-bottom: 15px; }
-      w
-section.eventsList article.eventItem .eventContent .eventTitle {
+      section.eventsList article.eventItem .eventContent .eventTitle {
         font-size: 15px;
         color: #a11526;
         font-family: "AvenirRegular";
         font-weight: 400;
         text-transform: uppercase;
         margin: 0px; }
-      w
-section.eventsList article.eventItem .eventContent .eventDescri {
+      section.eventsList article.eventItem .eventContent .eventDescri {
         font-family: "Open Sans"; }
-    w
-section.eventsList article.eventItem aside.eventInfos {
+    section.eventsList article.eventItem aside.eventInfos {
       width: 100%;
       height: 40px;
       background: #373737;
@@ -3163,25 +3158,19 @@ section.eventsList article.eventItem aside.eventInfos {
       padding: 0 20px;
       border-radius: 0 0 5px 5px; }
       @media screen and (min-width: 992px) {
-        w
-section.eventsList article.eventItem aside.eventInfos {
+        section.eventsList article.eventItem aside.eventInfos {
           line-height: 40px; } }
-      w
-section.eventsList article.eventItem aside.eventInfos .eventLength, w
-section.eventsList article.eventItem aside.eventInfos .eventDate, w
-section.eventsList article.eventItem aside.eventInfos .separator {
+      section.eventsList article.eventItem aside.eventInfos .eventLength, section.eventsList article.eventItem aside.eventInfos .eventDate, section.eventsList article.eventItem aside.eventInfos .separator {
         font-weight: 700;
         text-transform: uppercase;
         color: #fbfbfb; }
-      w
-section.eventsList article.eventItem aside.eventInfos .readMore {
+      section.eventsList article.eventItem aside.eventInfos .readMore {
         float: right;
         font-family: "AvenirRegular";
         font-size: 15px;
         color: #fbfbfb;
         text-decoration: underline; }
-        w
-section.eventsList article.eventItem aside.eventInfos .readMore:hover {
+        section.eventsList article.eventItem aside.eventInfos .readMore:hover {
           text-decoration: none; }
 
 section.sidebar {
