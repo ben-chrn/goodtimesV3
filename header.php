@@ -8,8 +8,8 @@
     <?php wp_head(); ?>
     <!-- CSS -->
     
-    <link href="<?php bloginfo('template_url'); ?>/js/owl-carousel/owl.carousel.css">
-    <link href="<?php bloginfo('template_url'); ?>/js/owl-carousel/owl.theme.css">
+    <link href="<?= bloginfo('template_url') ?>/js/owl-carousel/owl.carousel.css">
+    <link href="<?= bloginfo('template_url') ?>/js/owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="<?php echo get_template_directory_uri() ?>/style.css" rel="stylesheet" media="screen">
 
