@@ -58,6 +58,12 @@ echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_
 }
 add_action('login_head', 'my_custom_login');
 
+//Custom excerpt length
+function custom_excerpt_length( $length ) {
+  return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 // Obtenir les post les plus consultés
 // 
 
