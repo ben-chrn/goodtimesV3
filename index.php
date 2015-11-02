@@ -54,7 +54,7 @@
 
         <div class="content_home">
             <div class="row">
-                <section class="col-md-5 col-lg-5 recipe">
+                <section class="col-md-6 col-lg-6 recipe">
                       <h2>La recette du jour !</h2><br>
                          <?php
                             $args = array( 'post_type' => "recette", 'orderby' => 'rand', 'posts_per_page' => '1');
@@ -78,7 +78,7 @@
                     ?>
                 </section>
 
-                <section class="col-md-6 col-lg-6 col-md-offset-1 col-lg-offset-1 more_consult">
+                <section class="col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1 more_consult">
                      <h2>Les plus consultés</h2>
 
                       <?php
