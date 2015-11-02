@@ -4,7 +4,7 @@
 <?php get_header(); ?>
  <section class="content">
            <div class="bg-img"> 
-                <form action="" method = "POST" class="desktop">
+                <form action="<?php wp_mail('mathieulevi@gmail.com', 'Sujet', '', ''); ?>" method = "POST" class="desktop">
                     <h2>Contactez nous</h2>
                     <input placeholder="Nom et Prénom"></input>
                     <input placeholder="Email"></input>
