@@ -66,6 +66,7 @@
                                 <?php the_post_thumbnail(array(100,100) , array( 'class' => 'dayRecipee_thumbnail col-xs-12 col-md-3' ) ); ?>
                                     <?php the_excerpt(); ?>
                                 </a>
+                        <div class="clear"></div>
                         <div class="moreread">
                             <a href="<?php the_permalink(); ?>">
                                 <p>Lire la suite</p>
@@ -78,7 +79,6 @@
 
                 <section class="col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1 more_consult">
                      <h2>Les plus consultés</h2>
-
                       <?php
                        query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
                        if (have_posts()) : while (have_posts()) : the_post(); ?>
