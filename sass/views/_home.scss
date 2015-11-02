@@ -1,12 +1,11 @@
-
 .slider {
 	width: 100%;
-	display: inline-block;
+	// background: url('http://pipsum.com/1500x600.jpg') center no-repeat;
 }
 
-#slider .item img{
+.slider .items {
     display: block;
-    width: 10%;
+    width: 100%;
     height: auto;
 }
 
@@ -15,15 +14,15 @@ section.moment {
 	margin-top: 20px;
 
 	article.morning {
-		background: url('http://pipsum.com/1000x1000.jpg') center no-repeat;
+		background: center no-repeat;
 	}
 
 	article.day {
-		background: url('http://pipsum.com/1000x1000.jpg') center no-repeat;
+		background: center no-repeat;
 	}
 
 	article.night {
-		background: url('http://pipsum.com/1000x1000.jpg') center no-repeat;
+		background: center no-repeat;
 	}	
 
 	article {

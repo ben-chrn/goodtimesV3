@@ -11,7 +11,7 @@
     </footer>
     <?php wp_footer(); ?>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="<?php bloginfo('template_url');?>/js/owl-carousel/owl.carousel.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="<?php bloginfo('template_url');?>/js/app.js"></script>
 </body>
