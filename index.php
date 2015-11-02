@@ -64,9 +64,7 @@
 
                                 <a href="<?php the_permalink();?>">
                                 <?php the_post_thumbnail(array(100,100) , array( 'class' => 'dayRecipee_thumbnail col-xs-12 col-md-3' ) ); ?>
-                                <p class="content_recipe">
                                     <?php the_excerpt(); ?>
-                                 </p>
                                 </a>
                         <div class="moreread">
                             <a href="<?php the_permalink(); ?>">
@@ -89,7 +87,7 @@
                                     <div class="left_picture">
                                         <img src="http://pipsum.com/80x80.jpg"/>
                                     </div>
-                                    <div class="right_text"> -->
+                                    <div class="right_text"> 
                                         <h3><?php the_title(); ?></h3>
                                         <p>
                                             <?php the_excerpt(); ?>
