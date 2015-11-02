@@ -118,7 +118,7 @@ section.moment {
 		h2 {
 			padding-top: 30px;
 			color: $red;
-			text-align: center;
+			text-align: left;
 			text-transform: uppercase;
 			padding-left: 10px;
 			padding-right: 10px;
@@ -172,7 +172,7 @@ section.moment {
 			border-top-left-radius: 5px;
 			border-top-right-radius: 5px;
 			color: $white;
-			text-align: center;
+			text-align: left;
 			text-transform: uppercase;
 			font-size: $title-size1;
 			padding: 18px;
@@ -200,6 +200,7 @@ section.moment {
 
 			.left_picture{
 				float: left;
+				width: 30%;
 				img {
 					border-radius: 2px;
 					margin-top: 10px;
@@ -212,6 +213,7 @@ section.moment {
 			.right_text{
 				padding: 10px;
 				float: right;
+				width: 70%;
 				h3 {
 					height: auto;
 					margin-left: 10px;
@@ -300,7 +302,6 @@ section.moment {
 			h2 {
 				padding-top: 30px;
 				color: $red;
-				text-align: center;
 				text-transform: uppercase;
 			}
 			p.content_recipe {
