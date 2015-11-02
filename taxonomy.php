@@ -9,11 +9,15 @@
 <?php $terms=get_the_terms($post->ID, 'type'); $term_id=$terms[0]->term_taxonomy_id;  ?>
 <?php $url = get_taxonomy_image( $term_id ); ?>
 
+<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
+
 <div class="headerCategory">
     <div class="headerPic" style="background-image:url(<?php echo $url ?>)"></div>
     <div class="navbarCategory">
         <div class="container">
-        <h2>Résultats de la recherche</h2>
+        <h2>Les recettes pour votre 
+        <?php echo apply_filters( 'the_title', $term->name ); ?>
+        </h2>
         </div>
     </div>
     </div>
@@ -54,17 +58,19 @@
                 <input type="hidden" name="post_type" id="cat" value="recette" />
                 <input type="text" size="16" name="s" value=""/>
                 <input type="submit" value="&#xf002;" style="font-family:FontAwesome;" class="submit">
-            </form>       
+            </form>        
         </div>
         <div class="categoriesContent">
             <h3>Nos autres recettes</h3>
             <ul class="categoriesList">
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
+            <?php 
+                $terms = get_terms('type'); 
+                foreach ($terms as $term) {
+                    $term_link = get_term_link( $term );?>
+                    <li class="categoriesItem"><a href="<?php echo $term_link ?>"><?php echo $term->name; ?></a></li>
+                <?php    
+                }
+            ?>
             </ul>
         </div>
     </section>

@@ -2746,12 +2746,12 @@ section.moment {
         margin-bottom: 10px;
         background-color: white; }
     .content_home section.more_consult article .right_text {
-      padding: 10px; }
+      padding: 10px;
+      float: right; }
       .content_home section.more_consult article .right_text h3 {
         height: auto;
         margin-left: 10px;
         margin-right: 12px;
-        float: left;
         color: #a11526;
         text-align: center;
         text-transform: uppercase;
