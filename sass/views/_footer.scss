@@ -38,3 +38,22 @@ footer {
 	}
 
 }
+
+
+footer.absolute{
+    position:absolute;
+    bottom:0;
+    margin-top: 0px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+	footer.absolute{
+	    position:relative;
+	    bottom:0;
+	    margin-top: 0px;
+
+	    p.error {
+	    	margin-top: 20px;
+	    }
+	}
+}
