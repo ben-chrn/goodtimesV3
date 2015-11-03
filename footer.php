@@ -1,7 +1,7 @@
     </div>
     </div>
 
-    <footer>
+    <footer class="c">
             <div class="col-md-10">
                 <p><span>© <?php bloginfo('name'); ?> 2015 </span> - Réalisé par la P2018 HÉTIC</p>
             </div>
