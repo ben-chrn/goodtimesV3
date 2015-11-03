@@ -16,18 +16,13 @@ $(document).ready(function() {
         return false;
     });
 
-  $(".slider").owlCarousel({
- 
-    autoPlay : true,
-    stopOnHover : true,
-    navigation:false,
-    paginationSpeed : 1000,
-    goToFirstSpeed : 2000,
-    singleItem : true,
-    autoHeight : true,
-    transitionStyle:"fade",
-    responsive: true
-  });
+  $('.slider').slick({
+     slidesToShow: 1,
+     slidesToScroll: 1,
+     arrows: false,
+     fade: true,
+     autoplay: true
+     });
  
 });
 

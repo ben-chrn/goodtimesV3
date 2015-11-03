@@ -18,20 +18,21 @@
     <div class="container">
         <section class="moment">
             <div class="row">
-                
+                <?php //$args = array( 'post_type' => "recette", 'orderby' => 'menu_order', 'post_per_page' => 1);
+               // $the_query = new WP_Query( $args );
+               //  if ($the_query->have_posts() ) : ?>
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day">
                     <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
                     <div class="hover-effect">
-                        <a href="<?php the_permalink(); ?>" class="hover-text">
+                        <a href="" class="hover-text">
                             <p><span>Découvrez nos recettes</span></p>
-                            <?php $terms=get_the_terms($post->ID, 'type'); $term_id=$terms[0]->term_taxonomy_id;  ?>
-                            <?php $url = get_taxonomy_image( $term_id ); ?>
+    
                         </a>
                     </div>
                 </article>
 
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day">
-                    <h3>Journée</h3>
+                    <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
                     <div class="hover-effect">
                         <a href="#" class="hover-text">
                             <p><span>Découvrez nos recettes</span></p>
@@ -40,7 +41,7 @@
                 </article>
 
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 night">
-                    <h3>Soirée</h3>
+                    <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
                     <div class="hover-effect">
                         <a href="#" class="hover-text">
                             <p><span>Découvrez nos recettes</span></p>

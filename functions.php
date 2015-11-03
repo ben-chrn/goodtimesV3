@@ -49,7 +49,7 @@ function create_post_type(){
 add_theme_support('post-thumbnails');
 add_image_size('img_liste', 270, 220, array('center','top')); 
 add_image_size('home', 370, 220, true); 
-add_image_size('slider', 1500, 600, true);
+add_image_size('slider', 1500, 300, true);
 add_image_size('otherArticles', 50, 50, true);
 
 // Changer page login 
@@ -67,27 +67,14 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 // Obtenir les post les plus consultés
 // 
 
-function getPostViews($postID){
-    $count_key = 'post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
-        return "0 View";
+function getPostViews($postID) {
+        $count_key = 'post_views_count';
+        $count = get_post_meta($postID, $count_key, true);
+        if($count==''){
+            delete_post_meta($postID, $count_key);
+            add_post_meta($postID, $count_key, '0');
+            return "Jamais consulté";
+        }
+        return 'Consulté ' . $count .' fois';
     }
-    return $count.' Views';
-}
-function setPostViews($postID) {
-    $count_key = 'post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
-        $count = 0;
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
-    }else{
-        $count++;
-        update_post_meta($postID, $count_key, $count);
-    }
-}
-
 ?>

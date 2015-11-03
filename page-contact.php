@@ -21,6 +21,7 @@
     <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
     <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
     <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img> -->
+
     <?php
         $args = array( 'post_type' => "equipe", 'posts_per_page' => 5);
             $loop = new WP_Query( $args );
@@ -30,6 +31,5 @@
             endwhile; ?>
 </section>
 
-
-<?php get_footer(absolute); ?>
+    <?php get_footer(); ?>
 
