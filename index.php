@@ -41,7 +41,7 @@
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center top;">
                     <h3><?php echo $journee->name; ?></h3>
                     <div class="hover-effect">
-                        <a href="#" class="hover-text">
+                        <a href="<?php echo get_term_link($journee) ?>" class="hover-text">
                             <span>Découvrez nos recettes</span>
                         </a>
                     </div>
@@ -52,7 +52,7 @@
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center top;">
                     <h3><?php echo $soiree->name; ?></h3>
                     <div class="hover-effect">
-                        <a href="#" class="hover-text">
+                        <a href="<?php echo get_term_link($soiree) ?>" class="hover-text">
                             <span>Découvrez nos recettes</span>
                         </a>
                     </div>
