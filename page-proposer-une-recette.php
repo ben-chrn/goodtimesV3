@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<section class="bg-img"> 
+<section class=""> 
 </section>
 
     <div class="container">
@@ -44,4 +44,4 @@
         <div class="clear"></div>
     </div>
 
-<?php get_footer('absolute'); ?>
+<?php get_footer(); ?>
