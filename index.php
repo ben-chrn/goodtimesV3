@@ -12,7 +12,11 @@
                         <?php 
                            $url = get_field('slider_thumbnail');
                         ?>
-                        <a href="<?php the_permalink();?>" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center;"/></a>
+                        <a href="<?php the_permalink();?>" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center;"/>
+                            <span><?php the_title(); ?></span>
+                            <div class="hover_rgba">
+                            </div>
+                        </a>
                     </div>
                 <?php endwhile; ?>
             </section>
@@ -28,7 +32,6 @@
                     <div class="hover-effect">
                         <a href="<?php echo get_term_link($matinee) ?>" class="hover-text">
                             <span>Découvrez nos recettes</span>
-    
                         </a>
                     </div>
                 </article>
