@@ -59,12 +59,14 @@
         <div class="categoriesContent">
             <h3>Nos autres recettes</h3>
             <ul class="categoriesList">
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
+                <?php 
+                    $terms = get_terms('type'); 
+                    foreach ($terms as $term) {
+                        $term_link = get_term_link( $term );?>
+                        <li class="categoriesItem"><a href="<?php echo $term_link ?>"><?php echo $term->name; ?></a></li>
+                    <?php    
+                    }
+                ?>
             </ul>
         </div>
     </section>
