@@ -10,10 +10,13 @@
                 <?php while($the_query -> have_posts()) : $the_query->the_post(); ?>
                     <div class="items">
                         <?php 
-                           // $image = get_field('slider_thumbnail');
-                           // $url = $image[array('slider_thumbnail')];
+                           $url = get_field('slider_thumbnail');
                         ?>
-                        <a href="<?php the_permalink();?>"><img src="<?php the_field('slider_thumbnail'); ?>" /></a>
+                        <a href="<?php the_permalink();?>" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center;"/>
+                            <span><?php the_title(); ?></span>
+                            <div class="hover_rgba">
+                            </div>
+                        </a>
                     </div>
                 <?php endwhile; ?>
             </section>
@@ -22,33 +25,35 @@
     <div class="container">
         <section class="moment">
             <div class="row">
-                <?php //$args = array( 'post_type' => "recette", 'orderby' => 'menu_order', 'post_per_page' => 1);
-               // $the_query = new WP_Query( $args );
-               //  if ($the_query->have_posts() ) : ?>
-                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day">
-                    <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
+            <?php $matinee = get_term_by('name', 'matinee', 'type') ?>
+                <?php $url = get_taxonomy_image($matinee->term_id,'home'); ?>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center top;">
+                    <h3><?php echo $matinee->name; ?></h3>
                     <div class="hover-effect">
-                        <a href="" class="hover-text">
-                            <p><span>Découvrez nos recettes</span></p>
-    
+                        <a href="<?php echo get_term_link($matinee) ?>" class="hover-text">
+                            <span>Découvrez nos recettes</span>
                         </a>
                     </div>
                 </article>
 
-                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day">
-                    <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
+                <?php $journee = get_term_by('name', 'journee', 'type') ?>
+                <?php $url = get_taxonomy_image($journee->term_id,'home'); ?>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center top;">
+                    <h3><?php echo $journee->name; ?></h3>
                     <div class="hover-effect">
                         <a href="#" class="hover-text">
-                            <p><span>Découvrez nos recettes</span></p>
+                            <span>Découvrez nos recettes</span>
                         </a>
                     </div>
                 </article>
 
-                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 night">
-                    <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
+                <?php $soiree = get_term_by('name', 'soiree', 'type') ?>
+                <?php $url = get_taxonomy_image($soiree->term_id,'home'); ?>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center top;">
+                    <h3><?php echo $soiree->name; ?></h3>
                     <div class="hover-effect">
                         <a href="#" class="hover-text">
-                            <p><span>Découvrez nos recettes</span></p>
+                            <span>Découvrez nos recettes</span>
                         </a>
                     </div>
                 </article>
@@ -103,46 +108,7 @@
                             <?php
                                endwhile; endif;
                                 wp_reset_query();
-                       ?>
-                                <a href="#">    
-                                    <article class="change">
-                                        <div class="left_picture">
-                                            <img src="http://pipsum.com/80x80.jpg"/>
-                                        </div>
-                                        <div class="right_text">
-                                            <h3>Titre</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            </p>
-                                        </div>
-                                    </article>
-                                </a>
-                                <a href="">
-                                    <article>
-                                        <div class="left_picture">
-                                            <img src="http://pipsum.com/80x80.jpg"/>
-                                        </div>
-                                        <div class="right_text">
-                                            <h3>Titre</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-                                            </p>
-                                        </div>
-                                    </article>
-                                </a>
-                                <a href="#">
-                                    <article class="change">
-                                        <div class="left_picture">
-                                            <img src="http://pipsum.com/80x80.jpg"/>
-                                        </div>
-                                        <div class="right_text">
-                                            <h3>Titre</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            </p>
-                                        </div>
-                                    </article>
-                                </a>
+                            ?>
                         </section>
                     </div>
             </div>
