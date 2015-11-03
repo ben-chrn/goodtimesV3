@@ -20,28 +20,36 @@
             <div class="row">
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day">
                     <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
+            <?php $matinee = get_term_by('name', 'matinee', 'type') ?>
+                <?php $url = get_taxonomy_image($matinee->term_id,'home'); ?>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center top;">
+                    <h3><?php echo $matinee->name; ?></h3>
                     <div class="hover-effect">
-                        <a href="" class="hover-text">
-                            <p><span>Découvrez nos recettes</span></p>
+                        <a href="<?php echo get_term_link($matinee) ?>" class="hover-text">
+                            <span>Découvrez nos recettes</span>
     
                         </a>
                     </div>
                 </article>
 
-                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day">
-                    <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
+                <?php $journee = get_term_by('name', 'journee', 'type') ?>
+                <?php $url = get_taxonomy_image($journee->term_id,'home'); ?>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center top;">
+                    <h3><?php echo $journee->name; ?></h3>
                     <div class="hover-effect">
                         <a href="#" class="hover-text">
-                            <p><span>Découvrez nos recettes</span></p>
+                            <span>Découvrez nos recettes</span>
                         </a>
                     </div>
                 </article>
 
-                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 night">
-                    <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
+                <?php $soiree = get_term_by('name', 'soiree', 'type') ?>
+                <?php $url = get_taxonomy_image($soiree->term_id,'home'); ?>
+                <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center top;">
+                    <h3><?php echo $soiree->name; ?></h3>
                     <div class="hover-effect">
                         <a href="#" class="hover-text">
-                            <p><span>Découvrez nos recettes</span></p>
+                            <span>Découvrez nos recettes</span>
                         </a>
                     </div>
                 </article>
