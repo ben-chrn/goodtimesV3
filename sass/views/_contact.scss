@@ -93,6 +93,11 @@
           max-width:100%;
           resize:none;
       } 
+      ::-webkit-input-placeholder { color:$gray3; font-family: $font; }
+      ::-moz-placeholder { color: $gray3; font-family: $font; } /* firefox 19+ */
+      :-ms-input-placeholder { color:$gray3; font-family: $font;  } /* ie */
+      input:-moz-placeholder { color:$gray3; font-family: $font;  }
+
     }
 }
 
