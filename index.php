@@ -10,10 +10,9 @@
                 <?php while($the_query -> have_posts()) : $the_query->the_post(); ?>
                     <div class="items">
                         <?php 
-                           // $image = get_field('slider_thumbnail');
-                           // $url = $image[array('slider_thumbnail')];
+                           $url = get_field('slider_thumbnail');
                         ?>
-                        <a href="<?php the_permalink();?>"><img src="<?php the_field('slider_thumbnail'); ?>" /></a>
+                        <a href="<?php the_permalink();?>" style="background:url('<?php echo $url ?>'); background-size:cover; background-position:center;"/></a>
                     </div>
                 <?php endwhile; ?>
             </section>
