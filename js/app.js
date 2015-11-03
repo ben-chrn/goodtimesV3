@@ -21,7 +21,8 @@ $(document).ready(function() {
      slidesToScroll: 1,
      arrows: false,
      fade: true,
-     autoplay: true
+     autoplay: true,
+     adaptiveHeight: true
      });
  
 });

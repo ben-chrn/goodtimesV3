@@ -9,11 +9,7 @@
             <section class="slider">
                 <?php while($the_query -> have_posts()) : $the_query->the_post(); ?>
                     <div class="items">
-                        <?php 
-                           // $image = get_field('slider_thumbnail');
-                           // $url = $image[array('slider_thumbnail')];
-                        ?>
-                        <a href="<?php the_permalink();?>"><img src="<?php the_field('slider_thumbnail'); ?>" /></a>
+                        <a href="<?php the_permalink();?>"><?php the_post_thumbnail('slider');?> </a>
                     </div>
                 <?php endwhile; ?>
             </section>
@@ -22,9 +18,6 @@
     <div class="container">
         <section class="moment">
             <div class="row">
-                <?php //$args = array( 'post_type' => "recette", 'orderby' => 'menu_order', 'post_per_page' => 1);
-               // $the_query = new WP_Query( $args );
-               //  if ($the_query->have_posts() ) : ?>
                 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 day">
                     <h3><?php echo the_terms($post->ID, 'type',''); ?></h3>
                     <div class="hover-effect">
@@ -104,7 +97,7 @@
                                endwhile; endif;
                                 wp_reset_query();
                        ?>
-                                <a href="#">    
+                                <!-- <a href="#">    
                                     <article class="change">
                                         <div class="left_picture">
                                             <img src="http://pipsum.com/80x80.jpg"/>
@@ -142,7 +135,7 @@
                                             </p>
                                         </div>
                                     </article>
-                                </a>
+                                </a> -->
                         </section>
                     </div>
             </div>

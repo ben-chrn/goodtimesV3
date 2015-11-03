@@ -49,7 +49,7 @@ function create_post_type(){
 add_theme_support('post-thumbnails');
 add_image_size('img_liste', 270, 220, array('center','top')); 
 add_image_size('home', 370, 220, true); 
-add_image_size('slider', 1500, 300, true);
+add_image_size('slider', 3000, 300, true);
 add_image_size('otherArticles', 50, 50, true);
 
 // Changer page login 
