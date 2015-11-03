@@ -22,6 +22,7 @@ $(document).ready(function() {
      arrows: false,
      fade: true,
      autoplay: true,
+     speed: 3000,
      adaptiveHeight: true
      });
  

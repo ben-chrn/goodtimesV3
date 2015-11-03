@@ -9,7 +9,8 @@
             <section class="slider">
                 <?php while($the_query -> have_posts()) : $the_query->the_post(); ?>
                     <div class="items">
-                        <a href="<?php the_permalink();?>"><?php the_post_thumbnail('slider');?> </a>
+                        <a href="<?php the_permalink();?>"><?php the_post_thumbnail('slider');?> <br></a>
+                        <span class="title_slider"><?the_title(); ?></span>
                     </div>
                 <?php endwhile; ?>
             </section>
