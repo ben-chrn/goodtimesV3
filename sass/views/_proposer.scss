@@ -1,63 +1,133 @@
+section.left_proposer {
+    width: 40%;
+    float:left;
+    background-image: url('img/background_recette.jpg');
+    height: 100vh;
+    
+    .text {
+        h2 {
+            text-align: center;
+            margin-top: 150px;
+            font-family: $font;
+            color:$white;
+            font-size: 35px;
+            padding: 10px;
+            text-transform: uppercase;
+            line-height: 40px;
+        }
+        p {
+            text-align: center;
+            color: $white;
+            font-size: 20px;
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        } 
+    }
+} 
 
-
-section.bg-img{
-    background: url("http://lorempixel.com/1280/980");
-    background-size: cover;
-    position:absolute;
-    top:0px;
-    z-index:-1;
-    width:100%;
-    height:100vh;
+.fixed_background {
+    position: fixed;
+    top: 0;
+    z-index: -10;
 }
+
 
 section.form_proposer{
     padding:20px;
-    h1{
-        text-align: center;
-        font-family: $font;
-        color:$red;
-    }
-    .title{
-        width:100%;
-        text-align: center;
-        padding:10px;
+    width: 60%;
+    float:right;
 
-        input.text_base{
-            padding:10px;
-            appearance:none;
-            box-shadow:none;
-            height:40px;
-            border-radius:5px;
-            max-width:400px;
-            width:100%;
-            inset:0px;
-            border: 1px solid transparent;
-            border-top: none;
-            border-bottom: 1px solid #DDD;
-        }
-    }
-    .type{
+    input, ul {
+        font-family: $font-p;
+        width:100%;
+        border:1px solid #CCC;
+        background:#FFF;
+        margin:0 0 5px;
         padding:10px;
-        select{
+        &:hover {
+          @include transition(border-color 0.3s ease-in-out);
+          border:1px solid $red;
+        }
+
+        &:active, &:focus {
+          outline:0;
+          border:1px solid $red;
+        }
+
+      }
+
+    .acf-label {
+        label {
+            font-family: $font;
+            text-transform: uppercase;
+        }
+    }      
+
+    .acf-form-submit {
+        width: 50%;
+        display: block;
+        margin:0 auto;
+        margin-top: 20px;
+        margin-bottom: 50px;
+
+        input {        
+            cursor:pointer;
             width:100%;
-            height:40px;
-            background:$gray;
             border:none;
-        }
-    }
-    .prix{
-        padding:10px;
-        margin-top:10px;
-        input{
-            height:40px;
+            background: transparent;
+            color: $red;
+            margin:0 0 5px;
+            border: 2px solid $red;
             padding:10px;
-            border-radius:5px;
-            width:100%;
-            inset:0px;
-            border: 1px solid transparent;
-            border-top: none;
-            border-bottom: 1px solid #DDD;
+            font-size:15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+                i {
+                  font-size: 15px;
+                  margin-right: 10px;
+                }
+
+                &:hover {
+                  background: $red;
+                  color: $white;
+                  border: 2px solid $red;
+                  @include transition(background 0.4s ease-in-out);
+                }
+
+                &:active {
+                  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); 
+                }
+      }
+    }
+
+}
+
+
+/* MOBILE */
+@media screen and (min-width: 0px) and (max-width: 750px) {
+    section.form_proposer{
+        width:100%;
+    }
+
+    section.left_proposer {
+        margin-top: 0px;
+        width: 100%;
+        float:none;
+        background-image: none;
+        
+        .text {
+            h2 {
+                color:$red;
+            }
+            p {
+                color: $red;
+            } 
         }
+    } 
+    .fixed_background {
+        position: relative;
     }
 
 }

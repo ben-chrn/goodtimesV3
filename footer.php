@@ -6,7 +6,7 @@
                 <p><span>© <?php bloginfo('name'); ?> 2015 </span> - Réalisé par la P2018 HÉTIC</p>
             </div>
             <div class="hidden-mobile col-md-2">
-                <p><a href="#top">Retour en haut</a><p>
+                <a href="#top">Retour en haut</a>
             </div>
     </footer>
     <?php wp_footer(); ?>

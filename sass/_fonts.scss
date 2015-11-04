@@ -27,6 +27,11 @@
 
 }
 
+@font-face {
+     font-family: 'FontAwesome';
+     src: url('fonts/fontawesome-webfont.ttf');
+}
+
 
 
 
@@ -36,5 +41,6 @@ $title-size1 : 18px;
 $title-size2 : 15px;
 $font : "AvenirRegular";
 $font-p : "Open Sans";
+$fontAwesome : "FontAwesome";
 
 
