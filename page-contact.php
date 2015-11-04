@@ -23,14 +23,7 @@
                             <button type="submit" class="action-button"><i class="fa fa-paper-plane">      </i>Envoyer</button>
                         </p>
                 </form>
-        </div>
-        <section class="team">
-                      
-                <!-- <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
-                <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
-                <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
-                <img class="img-circle" src="http://pipsum.com/200x200.jpg"></img> -->
-        </section>    
+        </div>xz
     </div>
 </div>
 
