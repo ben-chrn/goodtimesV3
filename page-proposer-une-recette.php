@@ -1,12 +1,11 @@
 <?php /* Template Name: page-proposer-une-recette.php */ ?>
 <?php get_header(); ?>
+  <?php if (have_posts()) : ?>
+      <?php while (have_posts()) : the_post(); ?>
         <section class="left_proposer">
             <div class="text">
-               <h2>Proposez nous votre recette</h2>
-                <p>
-                  « C’est le moment de proposer votre recette. Partagez vos bons plans, vos idées d’activités ou tout simplement vos meilleurs moments. 
-                  Pour les enfants, les ados ou même les adultes, tout est bon à partagez ! Rendez heureux nos internautes. »
-                </p>
+              <h2>Proposez nous votre recette</h2>
+              <?php the_content(); ?>
             </div>
         </section>
         <section class="form_proposer">
@@ -27,4 +26,6 @@
             ?>
         </section>
         <div class="clear"></div>
+    <?php endwhile; ?>
+  <?php endif; ?>
 <?php get_footer(); ?>
