@@ -41,7 +41,7 @@
               <span class="icon-bar"></span>
             </div>
             </button>
-            <a href="<?php get_home_url(); ?>">
+            <a href="<?php bloginfo('url'); ?>">
               <div class="navbar-brand"><?php bloginfo('name'); ?></div>
             </a>
           </div>
