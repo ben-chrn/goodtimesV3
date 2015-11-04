@@ -15,6 +15,7 @@
 
 
     <!-- FAVICON -->
+    <link rel="icon" href="<?php bloginfo('template_url'); ?>/img/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_url'); ?>/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('template_url'); ?>/img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_url'); ?>/img/favicon/apple-icon-72x72.png">

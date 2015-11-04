@@ -1,5 +1,5 @@
 <?php /* Template Name: page-home.php */ ?> 
-<br>
+<span></span>
 <?php get_header(); ?>
 <body>
     <?php
@@ -62,7 +62,7 @@
             <div class="clear"></div>
 
             <div class="content_home">
-                    <section class="col-xs-12 col-lg-6 recipe">
+                    <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 recipe">
                           <h2>La recette du jour !</h2><br>
                              <?php
                                 $args = array( 'post_type' => "recette", 'orderby' => 'rand', 'posts_per_page' => '1');
@@ -85,36 +85,13 @@
                             ?>
                     </section>
 
-                  <!--   <section class="col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1 more_consult">
-                                        <h2>Les plus consultés</h2>
-                                         <?php
-                                          query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
-                                          if (have_posts()) : while (have_posts()) : the_post(); ?>
-                                             <a href="<?php the_permalink(); ?>">
-                                                   <article>
-                                                       <div class="left_picture">
-                                                           <img src="http://pipsum.com/80x80.jpg"/>
-                                                       </div>
-                                                       <div class="right_text"> 
-                                                           <h3><?php the_title(); ?></h3>
-                                                           <p>
-                                                               <?php the_excerpt(); ?>
-                                                           </p>
-                                                       </div>
-                                                  </article>
-                                               </a>
-                                               <?php
-                                                  endwhile; endif;
-                                                   wp_reset_query();
-                                               ?>
-                                           </section> -->
-
-                    <section class="col-xs-12 col-lg-6 more_consult">
+                    <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 more_consult">
                          <h2>Les plus consultés</h2>
                          <?php wpp_get_mostpopular('
                          post_type="recette"
-                         &thumbnail_width=100&thumbnail_height=100  
-                         &excerpt_length=40  
+                         &thumbnail_width=100&thumbnail_height=100
+                         &limit=3
+                         &excerpt_length=100  
                          &post_html="
                          <a href=\'{url}\'>
                             <article>
@@ -130,8 +107,8 @@
                     </section>
                     <div class="clear"></div>
                 </div>
-            </div>
         </div>
+    </div>
 </body>
 
 <?php get_footer(); ?>

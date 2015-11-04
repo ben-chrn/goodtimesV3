@@ -57,7 +57,7 @@ add_action('login_head', 'my_custom_login');
 
 //Custom excerpt length
 function custom_excerpt_length( $length ) {
-  return 20;
+  return 40;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

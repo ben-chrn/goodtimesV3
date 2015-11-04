@@ -2,7 +2,7 @@
 	width: 100%;
 	max-height:600px;
 	height: 400px;
-	// background: url('http://pipsum.com/1500x600.jpg') center no-repeat;
+	margin-top: -15px;
 }
 
 .slider .items {
@@ -60,15 +60,6 @@ section.moment {
 		margin:0;
 	}
 
-	article.morning {
-	}
-
-	article.day {
-	}
-
-	article.night {
-	}	
-
 	article {
 		position: relative;
   		overflow: hidden;
@@ -82,10 +73,11 @@ section.moment {
 		  	font-size: 25px;
 		  	font-weight: 500;
 		  	text-align: center;
-
+			color: white;
 		  	text-transform: uppercase;
 		  	letter-spacing: 5px;
 		  	padding-top: 60px;
+		  	text-shadow: 2px 2px 7px $black;
 		}
 
 		p {
@@ -164,8 +156,14 @@ section.moment {
 		margin-top:0px;
 
 		a {
-			font-size: $title-size2;
+			font-size: 18px;
 			text-transform: uppercase;
+			color: $red;
+			font-weight: bold;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 
 		h2 {
@@ -180,7 +178,7 @@ section.moment {
 		p {
 			padding: 10px;
 			margin:0px;
-			text-align: justify;
+			text-align: left;
 		}
 
 		img {
@@ -330,10 +328,16 @@ section.moment {
 		}
 
 		section.more_consult {
+			margin-top: 20px;
 			padding-left:0px;
-			margin-top:20px;
 		}
 	}
+
+	.dayRecipee_thumbnail {
+		display: none;
+	}
+
+	.content_home section.more_consult article .right_text { padding-left: 50px; }
       
 }
 
@@ -346,13 +350,14 @@ section.moment {
 
 	.content_home {
 		section.recipe {
-			margin-right: 15px;
-			margin-left: 15px;
 			padding-right: 0;
 			padding-left: 0;
 		}
 	}
-      
+
+	.content_home section.more_consult article .right_text { padding-left: 40px; }
+
+    
 }
 
 
@@ -371,10 +376,6 @@ section.moment {
 				color: $gray;
 				text-transform: uppercase;
 			}
-			p.content_recipe {
-				text-align: justify;	
-			}
-		
 		}
       
 	}
