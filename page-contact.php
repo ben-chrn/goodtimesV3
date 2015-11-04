@@ -23,7 +23,7 @@
                             <button type="submit" class="action-button"><i class="fa fa-paper-plane">      </i>Envoyer</button>
                         </p>
                 </form>
-        </div>xz
+        </div>
     </div>
 </div>
 
