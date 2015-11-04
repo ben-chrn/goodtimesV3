@@ -1,7 +1,4 @@
 <?php /* Template Name: page-proposer-une-recette.php */ ?>
-
-<?php acf_form_head(); ?>
-
 <?php get_header(); ?>
         <section class="left_proposer">
             <div class="text">
@@ -13,7 +10,8 @@
             </div>
         </section>
         <section class="form_proposer">
-            <?php acf_form(array(
+          <?php acf_form_head(); ?>
+          <?php acf_form(array(
                 'id' => 'contact-form',
                 'post_id' => 'new_post',
                 'new_post' => array(
@@ -21,11 +19,12 @@
                     'post_status' => 'draft',
                 ),
                 'post_title' => 'true',
+                'post_content' => 'true',
                 'submit_value' => 'Proposez !',
-                'return' => get_bloginfo('url') .'/merci',
+                'updated_message' => 'Recette envoyée !',
+                'return' => '',
                 ));
             ?>
         </section>
         <div class="clear"></div>
-
 <?php get_footer(); ?>

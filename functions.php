@@ -1,5 +1,4 @@
 <?php
-
 add_action('init','create_post_type');
 function create_post_type(){
   register_post_type('recette',
@@ -77,4 +76,10 @@ function getPostViews($postID) {
         }
         return 'Consulté ' . $count .' fois';
     }
-?>
+
+
+function tsm_save_image($post_id){
+  $image = get_field('thumbnail_id',$post_id);
+  update_post_meta($post_id, '_thumbnail_id', $image['ID']);
+}
+add_action('acf/save_post', 'tsm_save_image',10);
