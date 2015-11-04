@@ -40,17 +40,13 @@
                             $post_objects = get_field('post_objects');
                         </li> -->
 
-                        <?php $post_objects = get_field('ingredients');
-
-                        if( $post_objects): ?>
-                            <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
-                                <?php setup_postdata($post); ?>
-                                <li>
-                                    <i class="fa fa-check"></i><?php the_title(); ?></span>     
-                                </li>
-                            <?php endforeach; ?>
-                            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-                        <?php endif; ?>
+                        <?php $ingredients = get_terms('ingredient'); ?>
+                        <?php foreach ($ingredients as $ingredient): ?>
+                            <li>
+                                <i class="fa fa-check"></i><?php echo $ingredient->name; ?></span>     
+                            </li>
+                        <?php endforeach ?>
+                               
 
                         <!-- <li><i class="fa fa-check"></i>Ingrédient</li>
                         <li><i class="fa fa-check"></i>Ingrédient</li>

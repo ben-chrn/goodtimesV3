@@ -219,6 +219,11 @@ section.moment {
 
 	section.more_consult {
 		padding-right: 0px;
+		background:$gray;
+		ul{
+			margin:0px;
+			padding: 0px;
+		}
 
 		a {
 			color: $black;
@@ -250,14 +255,11 @@ section.moment {
 			background-color: $white;
 			overflow:hidden;
 			cursor: pointer;
+			padding-bottom:0px;
 
 			&:hover {
 			  	background: rgba(5, 8, 31, 0.2);
 			  	@include transition(0.5s);
-			}
-
-			&:last-child {
-				padding-bottom: 10px;
 			}
 
 			.left_picture{
@@ -281,7 +283,7 @@ section.moment {
 					height: auto;
 					margin-left: 10px;
 					margin-right: 12px;
-					color: $gray;
+					color: $red;
 					text-align: center;
 					text-transform: uppercase;
 					font-size: 18px;

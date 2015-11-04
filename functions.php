@@ -13,16 +13,14 @@ function create_post_type(){
       )
     );
 
-  register_post_type('ingrédient',
+  register_taxonomy(
+    'ingredient',
+    'recette',
     array(
-      'labels'=>array(
-        'name' => __('Ingrédients'),
-        'singular_name' => __('Ingrédient')
-        ),
-      'public' => true,
-      'supports' => array('title'),
-      )
-    );
+      'label' => __('Ingredient'),
+      'hierarchical' => true,
+    )
+  );
 
   register_post_type('equipe',
     array(

@@ -85,28 +85,48 @@
                             ?>
                     </section>
 
+                  <!--   <section class="col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1 more_consult">
+                                        <h2>Les plus consultés</h2>
+                                         <?php
+                                          query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
+                                          if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                             <a href="<?php the_permalink(); ?>">
+                                                   <article>
+                                                       <div class="left_picture">
+                                                           <img src="http://pipsum.com/80x80.jpg"/>
+                                                       </div>
+                                                       <div class="right_text"> 
+                                                           <h3><?php the_title(); ?></h3>
+                                                           <p>
+                                                               <?php the_excerpt(); ?>
+                                                           </p>
+                                                       </div>
+                                                  </article>
+                                               </a>
+                                               <?php
+                                                  endwhile; endif;
+                                                   wp_reset_query();
+                                               ?>
+                                           </section> -->
+
                     <section class="col-xs-12 col-lg-6 more_consult">
                          <h2>Les plus consultés</h2>
-                          <?php
-                           query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
-                           if (have_posts()) : while (have_posts()) : the_post(); ?>
-                              <a href="<?php the_permalink(); ?>">
-                                    <article>
-                                        <div class="left_picture">
-                                            <img src="http://pipsum.com/80x80.jpg"/>
-                                        </div>
-                                        <div class="right_text"> 
-                                            <h3><?php the_title(); ?></h3>
-                                            <p>
-                                                <?php the_excerpt(); ?>
-                                            </p>
-                                        </div>
-                                   </article>
-                                </a>
-                                <?php
-                                   endwhile; endif;
-                                    wp_reset_query();
-                                ?>
+                         <?php wpp_get_mostpopular('
+                         post_type="recette"
+                         &thumbnail_width=100&thumbnail_height=100  
+                         &excerpt_length=40  
+                         &post_html="
+                         <a href=\'{url}\'>
+                            <article>
+                                <div class=\'left_picture\'>
+                                    {thumb_img}
+                                </div>
+                                <div class=\'right_text\'>
+                                    <h3>{text_title}</h3>
+                                    <p>{summary}</p>
+                                </div>
+                            </article>
+                        </a>"');?>
                     </section>
                     <div class="clear"></div>
                 </div>
