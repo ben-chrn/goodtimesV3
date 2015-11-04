@@ -29,7 +29,7 @@ $(document).ready(function() {
        adaptiveHeight: true
   });
 
-  $h_header = $('header').height();
+  $h_header = $('header').height() -1;
   $(window).scroll(function () {
 
     if ($(this).scrollTop() > $h_header) {
